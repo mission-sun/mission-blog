@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://github.com/mission-sun/mission-blog.git',
       path : '/home/root-mission/blog/static',
-      'post-deploy' : 'npm install && npm run build'
+      'post-deploy' : 'npm install && npm run build && pm2 start build.sh  --interpreter bash'
     }
   }
 };

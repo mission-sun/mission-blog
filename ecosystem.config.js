@@ -22,7 +22,7 @@ module.exports = {
       user : 'root-mission',
       host : '49.234.222.116',
       ref  : 'origin/master',
-      repo : 'https://github.com/mission-sun/nodeDeployfe.git',
+      repo : 'https://github.com/mission-sun/mission-blog.git',
       path : '/home/root-mission/blog/static',
       'post-deploy' : 'npm install && npm run build'
     }

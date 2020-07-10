@@ -1,10 +1,10 @@
 <template>
   <div class="login-wrap">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="账号123" prop="username">
+      <el-form-item label="账号" prop="username">
         <el-input type="input" v-model="ruleForm.username" autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item label="密码123" prop="password">
+      <el-form-item label="密码" prop="password">
         <el-input type="password" v-model="ruleForm.password" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>

@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrap">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="账号" prop="username">
+      <el-form-item label="账号-目前测试" prop="username">
         <el-input type="input" v-model="ruleForm.username" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="密码" prop="password">

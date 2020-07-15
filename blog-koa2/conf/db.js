@@ -2,6 +2,7 @@ const env = process.env.NODE_ENV // 环境变量 环境参数
 
 let MYSQL_CONF
 let REDIS_CONF
+let MONGO_CONF
 if(env == 'dev') {
   MYSQL_CONF = {
     host     : 'localhost',

@@ -10,10 +10,6 @@ router.get("/", async (ctx, next) => {
 router.get("/api/cookie", async (ctx, next) => {
   console.log('USER_DATA', USER_DATA);
   let cookies = ctx.cookies.get("uerid");
-
-
-
-  
   console.log("cookies", cookies);
   if (!cookies) {
     ctx.cookies.set("uerid", "hello world", {

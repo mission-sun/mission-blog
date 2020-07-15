@@ -10,6 +10,4 @@ router.post('/login', function (ctx, next) {
   }
 })
 
-
-
 module.exports = router

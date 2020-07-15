@@ -55,19 +55,19 @@ app.use(async (ctx, next) => {
 
 // redis  
 
-app.keys = ['keys', 'keykeys'];
-app.use(session({
-   // 配置cookie
-  cookie: {
-    path: '/',
-    httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000
-  },
-  // 配置redis
-  store: redisStore({
-    all: `${ REDIS_CONF.host }:${ REDIS_CONF.port }`
-  })
-}));
+// app.keys = ['keys', 'keykeys'];
+// app.use(session({
+//    // 配置cookie
+//   cookie: {
+//     path: '/',
+//     httpOnly: true,
+//     maxAge: 24 * 60 * 60 * 1000
+//   },
+//   // 配置redis
+//   store: redisStore({
+//     all: `${ REDIS_CONF.host }:${ REDIS_CONF.port }`
+//   })
+// }));
 
 
 
@@ -79,7 +79,7 @@ app.use(blog.routes(), blog.allowedMethods());
 // error-handling
 app.on("error", (err, ctx) => {
   console.error("server error", err, ctx);
-  ctx.body = "not find";
+  ctx.body = "not find1212";
 });
 
 module.exports = app;

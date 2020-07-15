@@ -9,7 +9,7 @@ import store from '../store/index'
 const routes = [
   {
     path: "*",
-    redirect: "/login"
+    redirect: "/home/list"
   },
   {
     path: "/home",
@@ -46,17 +46,17 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes
 });
-router.beforeEach((to, from, next) => {
-  let isLogin = store.state.isLogin
-  if (to.meta.isNeedLogin) {
-    if (isLogin) {
-      next()
-    } else {
-      next('/login')
-    }
-  } else {
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   let isLogin = store.state.isLogin
+//   if (to.meta.isNeedLogin) {
+//     if (isLogin) {
+//       next()
+//     } else {
+//       next('/home/list')
+//     }
+//   } else {
+//     next()
+//   }
+// })
 
 export default router;

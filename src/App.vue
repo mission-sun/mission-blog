@@ -23,17 +23,18 @@ export default {
       loginState: 'loginState' 
     }),
     getUser() {
-      this.$get("/api/user/islogin").then(res => {
-        if( res.data.errno == 0) {
-          this.loginState(true)
-          this.$router.push({path: '/home/list'}).catch( err => {
-          })
-          return
-        }
-        this.loginState(false)
-        this.$router.push({path: '/login'}).catch( err => {
-        })
-      });
+      this.$router.push({path: '/home/list'});
+      // this.$get("/api/user/islogin").then(res => {
+      //   if( res.data.errno == 0) {
+      //     this.loginState(true)
+      //     this.$router.push({path: '/home/list'}).catch( err => {
+      //     })
+      //     return
+      //   }
+      //   this.loginState(false)
+      //   this.$router.push({path: '/login'}).catch( err => {
+      //   })
+      // });
     }
   },
   mounted() {

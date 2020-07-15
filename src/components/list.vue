@@ -34,7 +34,8 @@ export default {
   methods: {
     getBlogList() {
       this.$get("/api/blog/list").then(res => {
-        this.blogList = res.data.data;
+        console.log('res-blog', res.data);
+        this.blogList = res.data;
       });
     },
     del(id) {

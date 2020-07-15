@@ -1,7 +1,9 @@
 const router = require("koa-router")();
 
 router.prefix("/api/blog");
-let exec = require ('../db/mongo');
+// let exec = require ('../db/mongo');
+let exec = require('../db/mongose');
+
 
 router.get("/list", async function (ctx, next) {
   // const query = ctx.query;
@@ -17,7 +19,17 @@ router.get("/list", async function (ctx, next) {
   //   console.log('data', data);
   //   ctx.body = {};
   // }
-  await exec().then(res => {
+  // await exec().then(res => {
+  //   console.log('res.....', res);
+  //   ctx.body = res;
+  // })
+
+  // await exec.find( function(err, docs){
+  //   console.log('docs1212', docs);
+  //   ctx.body = {};
+  // })
+
+  await exec.find().then(res => {
     console.log('res.....', res);
     ctx.body = res;
   })

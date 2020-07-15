@@ -1,4 +1,5 @@
 module.exports = {
+  lintOnSave: false,
   // 选项...
   devServer: {
     disableHostCheck: true,

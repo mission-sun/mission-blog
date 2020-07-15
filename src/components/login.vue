@@ -62,6 +62,9 @@ export default {
       });
     },
     submitForm(formName) {
+        this.$get('/api/blog/list').then(res => {
+          console.log('res-blog-list', res )
+        });
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.$post("/api/user/login", this.ruleForm).then(res => {

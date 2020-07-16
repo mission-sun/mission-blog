@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 style="text-align: center; line-height: 40px; font-size: 20px">{{ msg }}</h1>
     <router-view></router-view>
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {
   name: "home",
   data() {
     return {
-      msg: "这是我的微博博客"
+      msg: "这是我的微博博客(mission)"
     };
   }
 };

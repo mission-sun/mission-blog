@@ -14,6 +14,7 @@
          <a @click="del(item.id)">
            查看详情
         </a>
+        <a>{{ item.time }}</a>
       </div>
     </div>
   </div>
@@ -75,6 +76,7 @@ export default {
     word-break: break-word;
   }
   .blog-hander{
+    text-align: right;
     width: 100%;
     padding-top: 15px;
     font-size: 12px;

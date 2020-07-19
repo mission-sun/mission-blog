@@ -5,7 +5,7 @@
       <div class="content">内容：{{ item.content }}</div>
       <div class="blog-hander">
         <a @click="del(item._id)">删除博客</a>
-        <a @click="del(item.id)">查看详情</a>
+        <!-- <a @click="del(item.id)">查看详情</a> -->
         <a>{{ item.time }}</a>
       </div>
     </div>

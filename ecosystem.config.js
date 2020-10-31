@@ -23,7 +23,7 @@ module.exports = {
       repo : 'https://github.com/mission-sun/mission-blog.git',
       path : '/home/root-mission/blog/web',
       'pre-deploy': "git fetch",
-      'post-deploy' : 'npm install --registry=https://registry.npm.taobao.org && npm run build'
+      'post-deploy' : 'npm install --registry=https://registry.npm.taobao.org && npm run build && mv -f dist ./..'
     }
   }
 };

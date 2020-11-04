@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app-wrap">
     <header class="header">
       <header-nav />
     </header>
@@ -55,14 +55,18 @@ export default{
 
 <style lang="less" scoped>
   body {
-    background-color: #f7f7f7;
+    height: 100%;
     .header {
       position: fixed;
       top: 0;
       left: 0;
       z-index: 10;
-      // height: 1rem;
       width: 100%;
+    }
+    .app-wrap {
+      background-color: #f4f5f5;
+      min-height: 100%;
+      overflow: hidden;
     }
   }
 </style>

@@ -1,7 +1,16 @@
 <template>
   <div>
     <div class="main-edit" id="main-edit">
-      <mavon-editor 
+      <div class="editorHeader">
+        <div class="left-box">
+          <input class="title" v-model="title" type="text" placeholder="请输入文章标题">
+        </div>
+         <div class="right-box">
+           <span @click="publish" class="publish">发布文章</span>
+        </div>
+      </div>
+      <mavon-editor
+      class="main-edit-blog" 
       @save="save"
       defaultOpen="preview"
       :subfield="true"
@@ -31,7 +40,8 @@ export default {
        'https://static.yancey.app/44299297_s.jpg',
        'https://static.yancey.app/02542344136f8c6cefd9138785bf6f40.jpg'
       ], 
-      value: "# 一级标题(这里写标题)"
+      value: "# 一级标题(这里写标题)",
+      title: ''
     };
   },
   created() {
@@ -45,20 +55,22 @@ export default {
       this.$get("/api/blog/detail", {_id: id}).then(res => {
         console.log('res-blog', res.data.data);
         this.value = res.data.data.content;
+        this.title = res.data.data.title;
       });
     },
-    save(value) {
-      let title = value.match(/^#*(^#|.*)\s/)[1];
+    publish() {
+      // let title = value.match(/^#*(^#|.*)\s/)[1];
+      let title = this.title;
       let image = '';
       try {
-        image = value.match(/!\[.*\]\((.*)\)/)[1];
+        image = this.value.match(/!\[.*\]\((.*)\)/)[1];
 
       }catch (err) {
         image = this.defaultImgs[Math.ceil(Math.random()*3)];
       }
       const data = {
         title,
-        content: value,
+        content: this.value,
         image
       };
       // 更新数据
@@ -79,8 +91,44 @@ export default {
 
 <style scoped lang="less">
 .main-edit {
-  // max-width: 800px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 60px;
+  .editorHeader {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 40px;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+    .left-box {
+      .title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        border: none;
+        outline: none;
+        width: 500px;
+      }
+    }
+    .right-box {
+      .publish {
+        font-size: 14px;
+        white-space: nowrap;
+        color: #007fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .main-edit-blog {
+    min-height: calc(100vh - 80px);
+  }
 }
 </style>

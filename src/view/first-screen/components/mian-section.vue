@@ -38,7 +38,7 @@
           </svg>
         </div> -->
       </div>
-      <p class="contents">这篇文章非常的优秀，点开即可全部浏览了</p>
+      <!-- <p class="contents">这篇文章非常的优秀，点开即可全部浏览了</p> -->
       <p class="edit">
          <router-link class="edit-btn" :to="{ path: '/blog', query: { id: data._id }}">
             编辑
@@ -104,14 +104,16 @@ export default {
     .time {
       display: flex;
       align-items: center;
+      font-size: 14px;
     }
     .title {
       color: #666;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
-      line-height: 50PX;
+      line-height: 40PX;
       padding: 10px 0;
       cursor: pointer;
+      display: block;
     }
     .user-status {
       display: flex;
@@ -141,7 +143,8 @@ export default {
     overflow: hidden;
     .blog-title-img {
       width: 100%;
-      object-fit: cover;
+      height: 200px;
+      // object-fit: cover;
       transition: transform 500ms ease 0s;
       &:hover {
         transform: scale(1.1);

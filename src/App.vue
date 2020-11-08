@@ -2,7 +2,8 @@
   <div id="app" class="app-wrap">
     <header class="header">
       <header-nav />
-    </header>
+    </header> 
+  
     <!-- <first-screen /> -->
     <router-view></router-view>
     <!-- <footer-box /> -->
@@ -13,13 +14,18 @@
 import { mapState, mapMutations } from 'vuex';
 import FirstScreen from './view/first-screen';
 import HeaderNav from './components/header-nav';
+import Popper from 'vue-popperjs';
+import 'vue-popperjs/dist/vue-popper.css';
 // import FooterBox from './components/footer';
 import "./common/index.less";
+import Pop from './components/pop';
 export default{
   name: "app",
   components: {
     // FirstScreen,
+    Pop,
     HeaderNav,
+    'popper': Popper
   },
   computed: {
   //  ...mapState({

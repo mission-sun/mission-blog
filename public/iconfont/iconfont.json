@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1346662",
+      "name": "默认头像",
+      "font_class": "morentouxiang",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1904067",
+      "name": "头像 男孩",
+      "font_class": "icon-test",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "1905487",
+      "name": "头像 女孩",
+      "font_class": "icon-test1",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "4419247",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "8152893",
+      "name": "头像",
+      "font_class": "BARISTA",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
       "icon_id": "4333443",
       "name": "时间",
       "font_class": "shijian",

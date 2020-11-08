@@ -5,20 +5,35 @@
         留言板
       </div>
       <div class="message-list">
+        <div class="list-item">
+          <div class="icon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-icon-test"></use>
+            </svg>
+          </div>
+          <div class="item-box">
+            <p class="name">博主 <span class="top1">置顶</span></p>
+            <p class="message">哈喽，大家好 我的博客终于再次上线了，这次简单的增加一个留言板功能，希望跟大家来点互动！<br>
+            跟大家玩一个小游戏，规则如下：
+            <br>
+            大家任意留言，发布后会生成一个名字（从水浒108人中随机产生）, <span style="color:red">如果您的名字是宋江（红包50），吴用（10元），武松（5元），林冲（2元），鲁智深（1元）</span>,当出现如上名字的时候，会发给大家对应的红包!
+            <br>
+            目前留言没有做限制，请合理留言，谢谢！
+            </p>
+
+            <p class="time">上线时刻</p>
+          </div>
+        </div>
         <div v-for="(item, index) in list" :key="index" class="list-item">
-          <div class="icon">icon</div>
+          <div class="icon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-icon-test"></use>
+            </svg>
+          </div>
           <div class="item-box">
             <p class="name">{{item.name}}</p>
             <p class="message">{{item.message}}</p>
             <p class="time">{{item.time}}</p>
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="icon">icon</div>
-          <div class="item-box">
-            <p class="name">用户名称</p>
-            <p class="message">你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文你的文章非常好，很有文采</p>
-            <p class="time">2个小时时间</p>
           </div>
         </div>
       </div>
@@ -31,8 +46,8 @@
       >
       </el-input>
       <div class="message-name-box">
-        <span>阁下是：</span>
-        <input v-model="name" placeholder="我是代码孙" class="user-name" type="text">
+        <!-- <span>阁下是：</span> -->
+        <!-- <input v-model="name" placeholder="我是代码孙" class="user-name" type="text"> -->
         <el-button @click="saveMessage" size="small">提交</el-button>
       </div>
     </div>
@@ -99,22 +114,24 @@ export default {
       .icon {
         width: 40px;
         height: 40px;
-        border: 1px solid #aaa;
+        // border: 1px solid #aaa;
         border-radius: 40px;
         overflow: hidden;
-        margin-right: 10px;
-        margin-left: 10px;
+        padding: 0 10px;
       }
       .item-box {
         flex: 1;
         padding: 0 10px 10px;
         border-bottom: 1px solid #f1f1f1;
+        .top1 {
+          color: red;
+        }
         .name {
           color: #8a9aa9;
         }
         .message {
           margin: 10px 0;
-          line-height: 20px;
+          line-height: 22px;
         }
         .time {
           color: #8a9aa9;
@@ -123,10 +140,20 @@ export default {
       // justify-content: ;
 
     }
+    /deep/ .el-textarea {
+      position: relative;
+      display: block;
+      width: 90%;
+      font-size: 14px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
   }
   .message-name-box {
+    padding: 20px 0;    
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 16px;
     .user-name {
       margin: 10px 20px;

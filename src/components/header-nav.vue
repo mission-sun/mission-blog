@@ -2,10 +2,13 @@
   <!-- <div :class="[isShowNav?'nav-animation-show':'','nav-wrap', 'nva-animation-hide']"> -->
   <div v-if ="isShowNav" :class="['nav-wrap']">
     <div class="logo">
-      <a class="pic"></a>
+      <!-- <a class="pic"></a> -->
       <!-- <a class="name">Mission</a> -->
       <router-link class="name" to="/">
-        你好打工人(孙明欣)
+        你好打工人  
+        <svg class="icon icon-size" aria-hidden="true">
+          <use xlink:href="#icon-icon-test"></use>
+        </svg>
       </router-link>
     </div>
     <div class="menu">
@@ -99,6 +102,10 @@ export default {
         line-height: 40px;
         color: #555;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .icon-size {
+        width: 20px;
+        height: 20px;
       }
     }
     .menu {

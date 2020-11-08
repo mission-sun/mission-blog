@@ -13,7 +13,7 @@
     </div>
     <div class="menu">
       <a class="menu-item" href="#" v-for="(item, index) in menu" :key="index">
-        <i class="el-icon-s-home"></i>
+        <i :class="item.icon"></i>
         <router-link :to="item.link">
         {{
           item.lable
@@ -32,19 +32,23 @@ export default {
       menu: [
         {
           lable: 'home',
-          link: '/'
+          link: '/',
+          icon:'el-icon-s-home'
         },
          {
           lable: '写文章',
-          link: '/blog'
+          link: '/blog',
+          icon: 'el-icon-reading'
         },
          {
           lable: '留言板',  
-          link: '/message'
+          link: '/message',
+          icon: 'el-icon-message'
         },
          {
           lable: '个人',
-          link: '/person'
+          link: '/person',
+          icon:'el-icon-user'
         }
       ]
     }

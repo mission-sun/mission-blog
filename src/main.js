@@ -9,7 +9,6 @@ import App from './App.vue'
 import { get, post } from './service/service'
 // import store from './store/index'
  
-
 Vue.use(ElementUI);
 Vue.use(mavonEditor);
 
@@ -23,4 +22,8 @@ new Vue({
   // store,
   router,
   render: h => h(App),
+  mounted() {
+    console.log('新型预渲染');
+    document.dispatchEvent(new Event('render-event'));
+  }
 }).$mount('#app')

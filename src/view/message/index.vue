@@ -46,8 +46,6 @@
       >
       </el-input>
       <div class="message-name-box">
-        <!-- <span>阁下是：</span> -->
-        <!-- <input v-model="name" placeholder="我是代码孙" class="user-name" type="text"> -->
         <el-button @click="saveMessage" size="small">提交</el-button>
       </div>
     </div>

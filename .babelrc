@@ -1,0 +1,14 @@
+{
+  "plugins": [
+      ["component", {
+          "libraryName": "mission-coms",
+          "libDir": "lib",
+          "style": false
+          // "styleLibrary": {
+          //     // "style": false,
+          //     // "name": "styles",
+          //     // "base": false // no base.css file
+          // }
+      }]
+  ]
+}

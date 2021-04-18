@@ -10,6 +10,14 @@ import FirstScreen from '../view/first-screen';
 import WriteBlog from '../view/blog/write';
 import BlogDetail from '../view/blog/detail';
 import Message from '../view/message';
+import Person from '../view/person';
+
+// const  FirstScreen  = () => import(/* webpackChunkName: 'FirstScreen' */ '../view/first-screen');
+// const  WriteBlog  = () => import(/* webpackChunkName: 'WriteBlog' */ '../view/blog/write');
+// const  BlogDetail  = () => import(/* webpackChunkName: 'BlogDetail' */ '../view/blog/detail');
+// const  Message  = () => import(/* webpackChunkName: 'Message' */ '../view/message');
+// const  Person  = () => import(/* webpackChunkName: 'Person' */ '../view/person');
+
 
 // import Home from "../components/home"
 const routes = [
@@ -44,12 +52,20 @@ const routes = [
     meta: {
       isNeedLogin: true
     }
+  },
+  {
+    path: "/person",
+    component: Person,
+    meta: {
+      isNeedLogin: true
+    }
   }
 ];
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 });
 // router.beforeEach((to, from, next) => {

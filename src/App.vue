@@ -1,8 +1,10 @@
 <template>
   <div id="app" class="app-wrap">
-    <header class="header">
+    <Hello />
+    <HelloClass />
+    <!-- <header class="header">
       <header-nav />
-    </header> 
+    </header>  -->
   
     <!-- <first-screen /> -->
     <router-view></router-view>
@@ -10,10 +12,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { mapState, mapMutations } from 'vuex';
 import FirstScreen from './view/first-screen';
 import HeaderNav from './components/header-nav';
+import Hello from './components/hello';
+import HelloClass from './components/hello-class';
+
 import Popper from 'vue-popperjs';
 import 'vue-popperjs/dist/vue-popper.css';
 // import FooterBox from './components/footer';
@@ -23,6 +28,8 @@ export default{
   name: "app",
   components: {
     // FirstScreen,
+    Hello,
+    HelloClass,
     Pop,
     HeaderNav,
     'popper': Popper

@@ -4,7 +4,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'amfe-flexible'
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
-import router from "./routes/index.js"
+import router from "./routes/index"
 import App from './App.vue'
 import { get, post } from './service/service'
 // import store from './store/index'

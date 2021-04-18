@@ -9,6 +9,9 @@
           //     // "name": "styles",
           //     // "base": false // no base.css file
           // }
-      }]
-  ]
+      }],
+      ["@babel/proposal-decorators", { "legacy": true }],
+      ["@babel/proposal-class-properties", { "loose": true }],
+      ["transform-vue-jsx"]
+    ]
 }

@@ -4,6 +4,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -31,7 +32,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", "src/components/hello-class.jsx"
+    "tests/**/*.tsx", "src/components/hello-class.jsx",
+    "node_modules/vue-tsx-support/enable-check.d.ts"
   ],
   "exclude": [
     "node_modules"

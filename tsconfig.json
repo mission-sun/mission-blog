@@ -11,6 +11,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "types": [
       "webpack-env"
@@ -33,7 +34,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx", "src/components/hello-class.jsx",
-    "node_modules/vue-tsx-support/enable-check.d.ts"
+    "node_modules/vue-tsx-support/enable-check.d.ts", "src/routes/index.js", "src/iconfont/iconfont.js"
   ],
   "exclude": [
     "node_modules"

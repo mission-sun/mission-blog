@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const get = (url, params) => {
+const get = (url: string, params: any) => {
   const promise = new Promise((reslove) => {
     axios({
       method: "get",
@@ -12,7 +12,7 @@ const get = (url, params) => {
   });
   return promise;
 };
-const post = (url, params) => {
+const post = (url: string, params: any) => {
   const promise = new Promise((reslove) => {
     axios({
       method: "post",

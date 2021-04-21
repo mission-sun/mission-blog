@@ -1,28 +1,13 @@
 import { Vue ,Component } from 'vue-property-decorator';
-import HelloClass from './components/hello-class';
-
-@Component({
-	HelloClass
-})
-export default class App extends Vue {
+import HelloClass from './components/hello-class.vue';
+import *  as tsx from 'vue-tsx-support';
+@Component
+export default class App extends tsx.Component<{}> {
 	render(){
 		return (
 			<div>
 				我是render <HelloClass />
 			</div>
 		)
-		// return <HelloClass  />
 	}
 }
-// import Vue from "vue";
-// import HelloClass from './components/hello-class'
-
-// import AwesomeButton from "third-party-library/awesome-button";
-// @Component
-
-// export default Vue.extend({
-//   render() {
-//     // ERROR: because TypeScript does not know that AwesomeButton has 'text' prop.
-//     return <AwesomeButton text="Click Me!" />;
-//   }
-// });

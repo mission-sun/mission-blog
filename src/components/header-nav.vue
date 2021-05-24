@@ -25,7 +25,8 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue';
+export default Vue.extend ({
   data() {
     return {
       isShowNav: true,
@@ -75,7 +76,7 @@ export default {
     //   };
     // }
   }
-}
+})
 </script>
 <style lang="less" scoped>
 .nva-animation-hide {

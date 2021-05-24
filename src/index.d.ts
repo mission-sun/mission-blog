@@ -3,3 +3,8 @@ declare module "@src/routes" {
   const router: Router;
   export default router;
 }
+
+declare module "*.less" {
+  const classes: { [key: string]: string };
+  export default classes;
+}

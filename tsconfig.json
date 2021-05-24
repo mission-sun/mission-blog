@@ -17,9 +17,15 @@
       "webpack-env"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@src/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@common/*": ["src/common/*"],
+      "@static/*": ["src/static/*"],
+      "@views/*": ["src/views/*"],
+      "@api/*": ["src/api/*"],
+      "@router/*": ["src/router/*"],
+      "@mixin/*": ["src/mixin/*"]
     },
     "lib": [
       "esnext",

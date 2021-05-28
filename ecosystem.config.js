@@ -20,7 +20,7 @@ module.exports = {
       user : 'root-mission',
       host : '154.8.204.98',
       ref  : 'origin/master',
-      repo : 'https://github.com/mission-sun/mission-blog.git',
+      repo : 'git@github.com:mission-sun/mission-blog.git',
       path : '/home/root-mission/blog/web',
       'pre-deploy': "git fetch",
       'post-deploy' : 'npm install --registry=https://registry.npm.taobao.org && npm run build && rm -rf ./../../dist && mv -f dist ./../..'

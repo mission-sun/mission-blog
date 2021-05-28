@@ -5,7 +5,7 @@
       <!-- <a class="pic"></a> -->
       <!-- <a class="name">Mission</a> -->
       <router-link class="name" to="/">
-        你好打工人  
+        worker 
         <svg class="icon icon-size" aria-hidden="true">
           <use xlink:href="#icon-icon-test"></use>
         </svg>

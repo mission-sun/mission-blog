@@ -55,6 +55,7 @@ export default {
     }
   },
   methods: {
+    save() {},
     getBlogDtail(id) {
       this.$get("/api/blog/detail", {_id: id}).then(res => {
         console.log('res-blog', res.data.data);

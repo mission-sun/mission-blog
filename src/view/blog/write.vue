@@ -5,6 +5,9 @@
         <div class="left-box">
           <input class="title" v-model="title" type="text" placeholder="请输入文章标题">
         </div>
+        <div class="left-box">
+          <input class="title" v-model="description" type="text" placeholder="请输入文章描述">
+        </div>
          <div class="right-box">
            <span @click="publish" class="publish">发布文章</span>
         </div>
@@ -41,7 +44,8 @@ export default {
        'https://static.yancey.app/02542344136f8c6cefd9138785bf6f40.jpg'
       ], 
       value: "# 一级标题(这里写标题)",
-      title: ''
+      title: '',
+      description: ''
     };
   },
   created() {

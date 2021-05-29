@@ -43,7 +43,8 @@
          <router-link class="edit-btn" :to="{ path: '/blog', query: { id: data._id }}">
             编辑
         </router-link>
-        <!-- <a class="edit-btn">编辑</a> -->
+        <!-- <a class="edit-btn">删除</a> -->
+        <el-button @click="deleteBlog(data)"> 删除 </el-button>
       </p>
     </div>
     <div v-if="!isLeft" class="section-right">
@@ -78,8 +79,12 @@ export default {
     gotoDetail(id) {
       console.log('id', id);
       this.$router.push({path: '/home/list'});
-
-    }
+    },
+    deleteBlog(data) {
+      this.$post("/api/blog/delete", data).then(res => {
+        console.log('res-blog-delete', res);
+      });
+    },
   }
 }
 </script>

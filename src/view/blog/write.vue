@@ -61,6 +61,7 @@ export default {
         console.log('res-blog', res.data.data);
         this.value = res.data.data.content;
         this.title = res.data.data.title;
+        this.description = res.data.description;
       });
     },
     publish() {
@@ -75,6 +76,7 @@ export default {
       }
       const data = {
         title,
+        description: this.description,
         content: this.value,
         image
       };
